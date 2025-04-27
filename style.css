@@ -1,9 +1,10 @@
    /* style.css */
 
    body {
-    background-color: #181818;
+    background-color: #171616;
     color: #989694;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -26,20 +27,21 @@ main {
 
 h1 {
     font-family: 'Bokor', sans-serif;
-    font-size: 3.2em;
-    margin-bottom: 0.5em;
-    color: #a5e1cd;
+    font-size: 6.4rem;
+    margin-bottom:0em;
+    color: #514949;
+ 
 }
 
 p {
     font-size: 1.2em;
-    color: #989694;
+    color: #c8c8c8;
     max-width: 25em;
 }
 
 a {
     text-decoration: underline dotted;
-    color: #7d7d7d;
+    color: #c8c8c8;
     transition: color 0.2s ease-in-out;
 }
 
