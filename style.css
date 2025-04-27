@@ -1,0 +1,48 @@
+   /* style.css */
+
+   body {
+    background-color: #181818;
+    color: #989694;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+nav {
+    /* background-color: #333; */
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+}
+
+main {
+    padding: 3rem;
+}
+
+h1 {
+    font-family: 'Bokor', sans-serif;
+    font-size: 3.2em;
+    margin-bottom: 0.5em;
+    color: #a5e1cd;
+}
+
+p {
+    font-size: 1.2em;
+    color: #989694;
+    max-width: 25em;
+}
+
+a {
+    text-decoration: underline dotted;
+    color: #7d7d7d;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #a0a0a0;
+}
