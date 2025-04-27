@@ -22,21 +22,24 @@ nav a {
 }
 
 main {
-    padding: 5vw;
+    padding: 1vh 5vw;
 }
 
 h1 {
-    font-family: 'Bokor', sans-serif;
+    /* font-family: 'Bokor', sans-serif; */
     font-size: 1.6rem;
     font-size: 15vw;
     font-weight: 100;
-    margin-bottom:.5em;
+    margin:.5em 0 .5em 0;
     color: #efe8e8;
     letter-spacing:0;
     line-height:1em;
  
 }
-
+ul{
+    margin-left:0;
+    padding: 0 0 0 20px;
+}
 p {
     font-size: 1.2em;
     color: #c8c8c8;
