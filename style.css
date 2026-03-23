@@ -812,20 +812,74 @@ img {
 
 .site-footer__name-wrap {
   grid-column: 1 / -1;
+  position: relative;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
   margin-top: calc(var(--row-unit) * 1.1);
   height: clamp(calc(var(--row-unit) * 2.8), 20vw, calc(var(--row-unit) * 4.4));
   min-height: 0;
   line-height: 0;
 }
 
-.site-footer__name {
+.site-footer__name-button {
+  position: absolute;
+  inset: 0;
   display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: default;
+  line-height: 0;
+}
+
+.site-footer__pronunciation {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(27, 28, 34, 0.88);
+  backdrop-filter: blur(16px);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: rgba(232, 230, 227, 0.82);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, calc(100% + 12px)) scale(0.96);
+  transition: opacity 0.24s ease, transform 0.24s ease;
+  z-index: 2;
+}
+
+.site-footer__pronunciation strong {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.site-footer__name-button:hover .site-footer__pronunciation,
+.site-footer__name-button:focus-visible .site-footer__pronunciation {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+
+.site-footer__name-button:focus-visible {
+  outline: 2px solid rgba(232, 230, 227, 0.5);
+  outline-offset: 6px;
+}
+
+.site-footer__name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
+  height: auto;
+  max-height: none;
 }
 
 /* ========================================
@@ -1123,6 +1177,17 @@ a:focus-visible {
     grid-column: 1 / -1;
     height: auto;
     margin-top: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  .site-footer__name-button {
+    height: auto;
+  }
+
+  .site-footer__pronunciation {
+    left: 50%;
+    bottom: 24px;
+    font-size: 0.72rem;
+    white-space: normal;
   }
 
   .site-footer__name {
