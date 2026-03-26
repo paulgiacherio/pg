@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex Skills vs. CMS Weight — Paul Giacherio</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page page--interior page--blog">
+    <header class="interior-hero interior-hero--blog">
+      <p class="blog-hero__eyebrow">Notes</p>
+      <h1 class="blog-hero__title">Codex skills are quietly replacing the need for a CMS on simple sites</h1>
+      <div class="blog-hero__meta">
+        <p>March 23, 2026</p>
+      </div>
+    </header>
+
+    <main class="interior-main interior-main--blog" id="main-content" tabindex="-1">
+      <article class="blog-post" aria-label="Blog post">
+        <p class="blog-post__paragraph">For a personal site, a traditional CMS often solves a problem and creates three more. It gives you an editor and a publishing interface, but it also introduces overhead, abstraction, and a layer between the author and the site itself. If the site is small, that trade can start to feel silly very quickly.</p>
+
+        <p class="blog-post__paragraph">What has felt more useful to me is the idea of a workflow as the CMS. The content still lives in plain HTML and CSS. The repo still carries the history. But the repeatable publishing logic gets pulled into a skill, where it can remember the exact files to touch, how a changelog should be structured, how versioning should work, and even how album art should be fetched from a music link.</p>
+
+        <figure class="blog-figure blog-figure--feature">
+          <img class="blog-figure__image" src="img/sky.jpg" alt="Looking north from Millbridge, Maine, in August 2022">
+          <figcaption class="blog-figure__caption">Looking north from Millbridge, Maine, August 2022</figcaption>
+        </figure>
+
+        <p class="blog-post__paragraph">That distinction matters. I do not really want a dashboard for this site. I want the site itself to remain legible. I want to be able to open the files, understand them, and move them by hand if I need to. But I also want some of the convenience people usually associate with publishing tools: version updates, canonical changelog records, syncing a homepage teaser, or keeping the footer music aligned with the newest release.</p>
+
+        <p class="blog-post__paragraph">Skills are a nice middle path because they can encode decisions without hiding the site. They can say: this is where the current version lives, this is how summaries are written, this is what counts as a patch versus a minor release, and this is how music metadata should be attached to an entry. Once those rules exist, the site starts behaving like it has an editorial system even though nothing about it has become bloated.</p>
+      </article>
+    </main>
+
+    <footer class="site-footer site-footer--interior site-footer--composed">
+      <div class="site-footer__meta">
+        <p class="site-footer__email"><a class="site-footer__link" href="mailto:paulgiacherio@gmail.com">paulgiacherio@gmail.com</a></p>
+      </div>
+      <div class="site-footer__name-wrap">
+        <img class="site-footer__name" src="img/giacherio-footer.svg" alt="" aria-hidden="true">
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
