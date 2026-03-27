@@ -635,6 +635,7 @@ a:focus-visible {
   padding: var(--client-card-padding);
   background: rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: transform 0.22s ease;
 }
 
 .client-card--ghost {
@@ -649,15 +650,54 @@ a:focus-visible {
   object-fit: contain;
   opacity: 0.6;
   transform: translateY(var(--logo-offset-y));
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+/* Name is always anchored to the card bottom via the footer.
+   Desc is taken out of the footer's layout flow (absolute) so it
+   never affects the name's position. JS sets --desc-height per card
+   so the footer slides up exactly the right amount on hover. */
+.client-card__footer {
+  position: absolute;
+  left: var(--client-card-padding);
+  right: var(--client-card-padding);
+  bottom: var(--client-card-padding);
+  transition: transform 0.22s ease;
 }
 
 .client-card__name {
-  position: absolute;
-  left: var(--client-card-padding);
-  bottom: var(--client-card-padding);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 300;
   color: rgba(232, 230, 227, 0.78);
+}
+
+.client-card__desc {
+  position: absolute;
+  top: calc(100% + 0.3rem);
+  left: 0;
+  right: 0;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: rgba(232, 230, 227, 0.42);
+  opacity: 0;
+  transition: opacity 0.18s ease 0.06s;
+}
+
+.client-card:hover {
+  transform: translateY(-4px);
+}
+
+.client-card:hover .client-card__logo {
+  opacity: 0.88;
+}
+
+.client-card:hover .client-card__footer {
+  transform: translateY(calc(-1 * var(--desc-height, 1.2rem) - 0.3rem));
+}
+
+.client-card:hover .client-card__desc {
+  opacity: 1;
 }
 
 
@@ -1466,6 +1506,19 @@ a:focus-visible {
   .client-card {
     flex: 0 0 clamp(14rem, 72vw, 18rem);
     scroll-snap-align: start;
+    transition: none;
+  }
+
+  .client-card__footer {
+    transform: none;
+    transition: none;
+  }
+
+  .client-card__desc {
+    position: static;
+    margin-top: 0.3rem;
+    opacity: 1;
+    transition: none;
   }
 
   /* Changelog */
