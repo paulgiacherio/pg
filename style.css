@@ -1162,10 +1162,6 @@ a:focus-visible {
   transform: none;
 }
 
-.site-footer--home .site-footer__note {
-  justify-self: end;
-}
-
 .site-footer__email {
   grid-column: 6;
   justify-self: end;
