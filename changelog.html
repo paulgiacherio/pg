@@ -5,105 +5,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Changelog — Paul Giacherio</title>
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=10">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="is-loading">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="page page--interior">
-    <header class="interior-hero">
-      <h1 class="interior-hero__title">changelog</h1>
+  <div class="page page--stream page--changelog">
+    <header class="stream-header">
+      <a href="index.html" class="stream-header__btn" aria-label="Back to home">
+        <svg class="stream-header__chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 13L5 8L10 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <h1 class="stream-header__title">Changelog</h1>
     </header>
 
-    <main class="interior-main" id="main-content" tabindex="-1">
-      <section class="changelog changelog--page" aria-label="Changelog">
+    <main class="changelog-page" id="main-content" tabindex="-1">
+      <section class="changelog changelog--page" aria-label="Changelog entries">
         <div class="changelog__list">
+          <article class="changelog__entry">
+            <p class="changelog__version">v1.0.0</p>
+            <p class="changelog__description">new design</p>
+            <div class="changelog__listening">
+              <a class="changelog__listening-link" href="https://music.apple.com/us/album/miss-machine/65885064" target="_blank" rel="noreferrer">
+                <img class="changelog__art" src="img/miss-machine.jpg" alt="Album art for Miss Machine by The Dillinger Escape Plan">
+                <span class="changelog__listening-copy">
+                  <span class="changelog__artist">The Dillinger Escape Plan</span>
+                  <span class="changelog__record">Miss Machine</span>
+                </span>
+              </a>
+            </div>
+          </article>
           <article class="changelog__entry">
             <p class="changelog__version">v0.3.4</p>
             <p class="changelog__description">client summaries</p>
             <div class="changelog__listening">
-              <img class="changelog__art" src="img/rtj4-deluxe-edition.jpg" alt="Album art for RTJ4 (Deluxe Edition) by Run The Jewels">
-              <div class="changelog__listening-copy">
-                <p class="changelog__artist">Run The Jewels</p>
-                <p class="changelog__record"><a class="changelog__record-link" href="https://music.apple.com/us/album/rtj4-deluxe-edition/1585790221" target="_blank" rel="noreferrer">RTJ4 (Deluxe Edition)</a></p>
-              </div>
+              <a class="changelog__listening-link" href="https://music.apple.com/us/album/rtj4-deluxe-edition/1585790221" target="_blank" rel="noreferrer">
+                <img class="changelog__art" src="img/rtj4-deluxe-edition.jpg" alt="Album art for RTJ4 (Deluxe Edition) by Run The Jewels">
+                <span class="changelog__listening-copy">
+                  <span class="changelog__artist">Run The Jewels</span>
+                  <span class="changelog__record">RTJ4 (Deluxe Edition)</span>
+                </span>
+              </a>
             </div>
           </article>
           <article class="changelog__entry">
             <p class="changelog__version">v0.3.3</p>
             <p class="changelog__description">css refactoring</p>
             <div class="changelog__listening">
-              <img class="changelog__art" src="img/our-love-to-admire.jpg" alt="Album art for Our Love To Admire by Interpol">
-              <div class="changelog__listening-copy">
-                <p class="changelog__artist">Interpol</p>
-                <p class="changelog__record"><a class="changelog__record-link" href="https://music.apple.com/us/album/our-love-to-admire/1645063607" target="_blank" rel="noreferrer">Our Love To Admire</a></p>
-              </div>
+              <a class="changelog__listening-link" href="https://music.apple.com/us/album/our-love-to-admire/1645063607" target="_blank" rel="noreferrer">
+                <img class="changelog__art" src="img/our-love-to-admire.jpg" alt="Album art for Our Love To Admire by Interpol">
+                <span class="changelog__listening-copy">
+                  <span class="changelog__artist">Interpol</span>
+                  <span class="changelog__record">Our Love To Admire</span>
+                </span>
+              </a>
             </div>
           </article>
           <article class="changelog__entry">
             <p class="changelog__version">v0.3.2</p>
             <p class="changelog__description">new global footer</p>
             <div class="changelog__listening">
-              <img class="changelog__art" src="img/metheny-mehldau.jpg" alt="Album art for Metheny Mehldau by Pat Metheny and Brad Mehldau">
-              <div class="changelog__listening-copy">
-                <p class="changelog__artist">Pat Metheny &amp; Brad Mehldau</p>
-                <p class="changelog__record"><a class="changelog__record-link" href="https://music.apple.com/us/album/metheny-mehldau/1445738902" target="_blank" rel="noreferrer">Metheny Mehldau</a></p>
-              </div>
+              <a class="changelog__listening-link" href="https://music.apple.com/us/album/metheny-mehldau/1445738902" target="_blank" rel="noreferrer">
+                <img class="changelog__art" src="img/metheny-mehldau.jpg" alt="Album art for Metheny Mehldau by Pat Metheny and Brad Mehldau">
+                <span class="changelog__listening-copy">
+                  <span class="changelog__artist">Pat Metheny &amp; Brad Mehldau</span>
+                  <span class="changelog__record">Metheny Mehldau</span>
+                </span>
+              </a>
             </div>
           </article>
           <article class="changelog__entry">
             <p class="changelog__version">v0.3.1</p>
             <p class="changelog__description">Added phonetic to the footer for the hell of it</p>
             <div class="changelog__listening">
-              <img class="changelog__art" src="img/eye-on-the-bat.jpg" alt="Album art for Eye on the Bat by Palehound">
-              <div class="changelog__listening-copy">
-                <p class="changelog__artist">Palehound</p>
-                <p class="changelog__record"><a class="changelog__record-link" href="https://music.apple.com/us/album/eye-on-the-bat/1676686618" target="_blank" rel="noreferrer">Eye on the Bat</a></p>
-              </div>
+              <a class="changelog__listening-link" href="https://music.apple.com/us/album/eye-on-the-bat/1676686618" target="_blank" rel="noreferrer">
+                <img class="changelog__art" src="img/eye-on-the-bat.jpg" alt="Album art for Eye on the Bat by Palehound">
+                <span class="changelog__listening-copy">
+                  <span class="changelog__artist">Palehound</span>
+                  <span class="changelog__record">Eye on the Bat</span>
+                </span>
+              </a>
             </div>
           </article>
           <article class="changelog__entry">
             <p class="changelog__version">v0.3.0</p>
             <p class="changelog__description">Added changelog page and version skill</p>
             <div class="changelog__listening">
-              <img class="changelog__art" src="img/splid.jpg" alt="Album art for Splid by Kvelertak">
-              <div class="changelog__listening-copy">
-                <p class="changelog__artist">Kvelertak</p>
-                <p class="changelog__record"><a class="changelog__record-link" href="https://music.apple.com/us/album/splid/1494048950" target="_blank" rel="noreferrer">Splid</a></p>
-              </div>
+              <a class="changelog__listening-link" href="https://music.apple.com/us/album/splid/1494048950" target="_blank" rel="noreferrer">
+                <img class="changelog__art" src="img/splid.jpg" alt="Album art for Splid by Kvelertak">
+                <span class="changelog__listening-copy">
+                  <span class="changelog__artist">Kvelertak</span>
+                  <span class="changelog__record">Splid</span>
+                </span>
+              </a>
             </div>
           </article>
           <article class="changelog__entry">
             <p class="changelog__version">v0.2.0</p>
             <p class="changelog__description">Added 'listening to' in the footer</p>
             <div class="changelog__listening">
-              <img class="changelog__art" src="img/kayo_dot.jpg" alt="Album art for Choirs of the Eye">
-              <div class="changelog__listening-copy">
-                <p class="changelog__artist">Kayo Dot</p>
-                <p class="changelog__record"><a class="changelog__record-link" href="https://music.apple.com/us/album/choirs-of-the-eye/1189391817" target="_blank" rel="noreferrer">Choirs of the Eye</a></p>
-              </div>
+              <a class="changelog__listening-link" href="https://music.apple.com/us/album/choirs-of-the-eye/1189391817" target="_blank" rel="noreferrer">
+                <img class="changelog__art" src="img/kayo_dot.jpg" alt="Album art for Choirs of the Eye">
+                <span class="changelog__listening-copy">
+                  <span class="changelog__artist">Kayo Dot</span>
+                  <span class="changelog__record">Choirs of the Eye</span>
+                </span>
+              </a>
             </div>
           </article>
           <article class="changelog__entry">
             <p class="changelog__version">v0.1.1</p>
             <p class="changelog__description">Tuned section spacing and parallax motion</p>
             <div class="changelog__listening">
-              <img class="changelog__art" src="img/knower-forever.jpg" alt="Album art for Knower Forever by Knower">
-              <div class="changelog__listening-copy">
-                <p class="changelog__artist">Knower</p>
-                <p class="changelog__record"><a class="changelog__record-link" href="https://music.apple.com/us/album/knower-forever/1704417175" target="_blank" rel="noreferrer">Knower Forever</a></p>
-              </div>
+              <a class="changelog__listening-link" href="https://music.apple.com/us/album/knower-forever/1704417175" target="_blank" rel="noreferrer">
+                <img class="changelog__art" src="img/knower-forever.jpg" alt="Album art for Knower Forever by Knower">
+                <span class="changelog__listening-copy">
+                  <span class="changelog__artist">Knower</span>
+                  <span class="changelog__record">Knower Forever</span>
+                </span>
+              </a>
             </div>
           </article>
           <article class="changelog__entry">
             <p class="changelog__version">v0.1.0</p>
             <p class="changelog__description">Initial layout</p>
             <div class="changelog__listening">
-              <img class="changelog__art" src="img/on-dark-horses.jpg" alt="Album art for On Dark Horses by Emma Ruth Rundle">
-              <div class="changelog__listening-copy">
-                <p class="changelog__artist">Emma Ruth Rundle</p>
-                <p class="changelog__record"><a class="changelog__record-link" href="https://music.apple.com/us/album/on-dark-horses/1808576286" target="_blank" rel="noreferrer">On Dark Horses</a></p>
-              </div>
+              <a class="changelog__listening-link" href="https://music.apple.com/us/album/on-dark-horses/1808576286" target="_blank" rel="noreferrer">
+                <img class="changelog__art" src="img/on-dark-horses.jpg" alt="Album art for On Dark Horses by Emma Ruth Rundle">
+                <span class="changelog__listening-copy">
+                  <span class="changelog__artist">Emma Ruth Rundle</span>
+                  <span class="changelog__record">On Dark Horses</span>
+                </span>
+              </a>
             </div>
           </article>
         </div>
@@ -112,12 +146,17 @@
 
     <footer class="site-footer site-footer--interior site-footer--composed">
       <div class="site-footer__meta">
-        <p class="site-footer__email"><a class="site-footer__link" href="mailto:paulgiacherio@gmail.com">paulgiacherio@gmail.com</a></p>
+        <p class="site-footer__email"><a class="site-footer__link link-orbit" href="mailto:paulgiacherio@gmail.com">paulgiacherio@gmail.com</a></p>
+        <p class="site-footer__changelog"><a class="site-footer__link link-orbit" href="changelog.html">changelog</a></p>
       </div>
       <div class="site-footer__name-wrap">
-        <img class="site-footer__name" src="img/giacherio-footer.svg" alt="" aria-hidden="true">
+        <button class="site-footer__name-button" type="button" aria-label="Giacherio pronunciation: Jah-care-ee-oh">
+          <img class="site-footer__name" src="img/giacherio-footer-dark.svg" alt="" aria-hidden="true">
+          <span class="site-footer__pronunciation" role="tooltip">Jah &bull; <strong>care</strong> &bull; ee &bull; oh</span>
+        </button>
       </div>
     </footer>
   </div>
+  <script defer src="js/page-transitions.js?v=1"></script>
 </body>
 </html>

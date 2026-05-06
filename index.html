@@ -5,57 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paul Giacherio — Design & Development</title>
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css?v=10">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+      "imports": {
+        "motion": "https://cdn.jsdelivr.net/npm/framer-motion@12/dom/+esm"
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="is-loading">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="page">
     <header class="hero">
-      <div class="hero__parallax-anchor" aria-hidden="true" data-parallax-section="hero"></div>
-      <div class="hero__panel-2 parallax-layer" data-parallax-root="hero" data-parallax-baseline="0.27" data-parallax-speed="-0.5"></div>
-      <div class="hero__panel-1 parallax-layer" data-parallax-root="hero" data-parallax-baseline="0.27" data-parallax-speed="0.6"></div>
       <div class="hero__text">
-        <p class="hero__name">Paul GIACHERIO</p>
-        <h1 class="hero__title">design leader with a focus on solving complex digital experiences</h1>
-        <p class="hero__version">2026 — v0.3.4</p>
+        <div class="hero__intro">
+          <p class="hero__intro-name">paul giacherio —</p>
+          <h1 class="hero__intro-title">design leader with a focus on complex digital experiences</h1>
+        </div>
+        <p class="hero__version">2026 — v1.0.0</p>
       </div>
-      <div class="glamour parallax-layer" data-parallax-root="hero" data-parallax-baseline="0.27" data-parallax-speed="0.3">
+      <div class="glamour">
+        <img
+          class="glamour__image"
+          src="img/image2.jpg"
+          width="1350"
+          height="919"
+          alt="Portrait of Paul Giacherio"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        >
         <div class="glamour__credit-wrap">
+          <span class="glamour__tooltip" role="tooltip">Photo: <a class="glamour__tooltip-link" href="https://www.sarahcramershields.com/" target="_blank" rel="noreferrer">Sarah Cramer Shields</a></span>
           <a class="glamour__credit" href="https://www.sarahcramershields.com/" target="_blank" rel="noreferrer" aria-label="Photo by Sarah Cramer Shields">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M8.5 5.5 10 4h4l1.5 1.5H18A3 3 0 0 1 21 8.5v7A3.5 3.5 0 0 1 17.5 19h-11A3.5 3.5 0 0 1 3 15.5v-7A3 3 0 0 1 6 5.5h2.5Zm3.5 2.25a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5Zm0 1.75a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor"/>
             </svg>
           </a>
-          <span class="glamour__tooltip" role="tooltip">Photo: <a class="glamour__tooltip-link" href="https://www.sarahcramershields.com/" target="_blank" rel="noreferrer">Sarah Cramer Shields</a></span>
         </div>
-      </div>
-      <div class="overview-panel-2">
-        <div class="overview-panel-2__content">
-          <p class="overview-panel-2__eyebrow">In brief</p>
-          <p>For more than 20 years, I’ve had the good fortune to work with exceptional teams designing products for organizations ranging from early-stage startups to the world’s largest brands.</p>
-        </div>
-        
       </div>
     </header>
+    <section class="home-section intro-para">
+      <p class="intro-para__text">For more than 20 years, I’ve had the good fortune to work with exceptional teams designing products for organizations ranging from early-stage startups to Fortune 500 brands.</p>
+    </section>
     <main class="page-sections" id="main-content" tabindex="-1">
-      <section class="role-table" aria-label="Recent roles" data-parallax-section="role-table">
-        <div class="role-table__row">
-          <p class="role-table__label">Current</p>
-          <p class="role-table__value">Head of Design, Manta</p>
-          <p class="role-table__url"><a class="link-orbit" href="https://joinmanta.ai/" target="_blank" rel="noreferrer">joinmanta.ai</a></p>
-        
-        </div>
-        <div class="role-table__row">
-          <p class="role-table__label">Previous</p>
-          <p class="role-table__value">Group Design Director, WillowTree</p>
-          <p class="role-table__url"><a class="link-orbit" href="https://www.telusdigital.com/" target="_blank" rel="noreferrer">telusdigital.com</a></p>
-          
+      <section class="home-section roles" aria-label="Recent roles" data-parallax-section="role-table">
+        <div class="role-table">
+          <div class="role-table__panel parallax-layer" aria-hidden="true" data-parallax-speed="-0.08"></div>
+          <div class="role-table__row">
+            <p class="role-table__label">Current</p>
+            <p class="role-table__value"><span class="role-table__title">Head of Design</span>, <span class="role-table__company">Manta</span></p>
+            <p class="role-table__url"><a class="link-orbit" href="https://joinmanta.ai/" target="_blank" rel="noreferrer">joinmanta.ai</a></p>
+          </div>
+          <div class="role-table__row">
+            <p class="role-table__label">Previous</p>
+            <p class="role-table__value"><span class="role-table__title">Group Design Director</span>, <span class="role-table__company">WillowTree</span></p>
+            <p class="role-table__url"><a class="link-orbit" href="https://www.telusdigital.com/" target="_blank" rel="noreferrer">telusdigital.com</a></p>
+          </div>
         </div>
       </section>
-      <section class="clients" aria-labelledby="clients-title" data-parallax-section="clients">
+      <section class="home-section clients" aria-labelledby="clients-title" data-parallax-section="clients">
         <div class="clients__layout">
-          <h2 class="clients__intro" id="clients-title">Clients who've shaped the way I work</h2>
+          <h2 class="clients__intro" id="clients-title">A handful of clients that have helped shape my perspectives</h2>
           <div class="clients__cards">
             <div class="clients__column clients__column--right parallax-layer" data-parallax-speed="0.2">
               <article class="client-card client-card--tall">
@@ -124,140 +139,52 @@
           </div>
         </div>
       </section>
-      <section class="changelog" aria-labelledby="changelog-title" data-parallax-section="changelog">
-        <div class="changelog__panel parallax-layer" aria-hidden="true" data-parallax-speed="-0.2"></div>
-        <div class="changelog__content">
-          <h2 class="changelog__eyebrow" id="changelog-title">Changelog</h2>
-          <div class="changelog__list">
-            <article class="changelog__entry">
-              <p class="changelog__version">v0.3.4</p>
-              <p class="changelog__description">client summaries</p>
-            </article>
-            <article class="changelog__entry">
-              <p class="changelog__version">v0.3.3</p>
-              <p class="changelog__description">css refactoring</p>
-            </article>
-            <article class="changelog__entry">
-              <p class="changelog__version">v0.3.2</p>
-              <p class="changelog__description">new global footer</p>
-            </article>
+      <section class="home-section changelog-section" aria-labelledby="changelog-title" data-parallax-section="changelog">
+        <div class="changelog">
+          <div class="changelog__panel parallax-layer" aria-hidden="true" data-parallax-speed="-0.2"></div>
+          <div class="changelog__content">
+            <h2 class="changelog__eyebrow" id="changelog-title">Changelog</h2>
+            <div class="changelog__list">
+              <article class="changelog__entry">
+                <p class="changelog__version">v1.0.0</p>
+                <p class="changelog__description">new design</p>
+              </article>
+              <article class="changelog__entry">
+                <p class="changelog__version">v0.3.4</p>
+                <p class="changelog__description">client summaries</p>
+              </article>
+              <article class="changelog__entry">
+                <p class="changelog__version">v0.3.3</p>
+                <p class="changelog__description">css refactoring</p>
+              </article>
+            </div>
+            <p class="changelog__link-wrap"><a class="link-orbit" href="changelog.html">view all</a></p>
           </div>
-          <p class="changelog__link-wrap"><a class="link-orbit" href="changelog.html">view all</a></p>
         </div>
       </section>
       <footer class="site-footer site-footer--composed site-footer--home">
         <div class="site-footer__meta">
           <div class="site-footer__note">
-            <img class="site-footer__album-art" src="img/rtj4-deluxe-edition.jpg" alt="Album art for RTJ4 (Deluxe Edition) by Run The Jewels">
+            <img class="site-footer__album-art" src="img/miss-machine.jpg" alt="Album art for Miss Machine by The Dillinger Escape Plan">
             <div class="site-footer__note-copy">
               <p class="site-footer__note-label">Built while listening to:</p>
-              <p class="site-footer__note-title"><a class="site-footer__link" href="https://music.apple.com/us/album/rtj4-deluxe-edition/1585790221" target="_blank" rel="noreferrer">Run The Jewels — RTJ4 (Deluxe Edition)</a></p>
+              <p class="site-footer__note-title"><a class="site-footer__link" href="https://music.apple.com/us/album/miss-machine/65885064" target="_blank" rel="noreferrer">The Dillinger Escape Plan — Miss Machine</a></p>
             </div>
           </div>
-          <p class="site-footer__email"><a class="site-footer__link" href="mailto:paulgiacherio@gmail.com">paulgiacherio@gmail.com</a></p>
+          <p class="site-footer__email"><a class="site-footer__link link-orbit" href="mailto:paulgiacherio@gmail.com">paulgiacherio@gmail.com</a></p>
+          <p class="site-footer__changelog"><a class="site-footer__link link-orbit" href="changelog.html">changelog</a></p>
         </div>
         <div class="site-footer__name-wrap">
           <button class="site-footer__name-button" type="button" aria-label="Giacherio pronunciation: Jah-care-ee-oh">
-            <img class="site-footer__name" src="img/giacherio-footer.svg" alt="" aria-hidden="true">
+            <img class="site-footer__name" src="img/giacherio-footer-dark.svg" alt="" aria-hidden="true">
             <span class="site-footer__pronunciation" role="tooltip">Jah &bull; <strong>care</strong> &bull; ee &bull; oh</span>
           </button>
         </div>
       </footer>
     </main>
   </div>
-  <script>
-    (() => {
-      const layers = Array.from(document.querySelectorAll('.parallax-layer'));
-      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const userAgent = navigator.userAgent;
-      const isSafari = /Safari/i.test(userAgent)
-        && !/Chrome|Chromium|CriOS|Edg|OPR|Firefox|FxiOS|Android/i.test(userAgent);
-      const parallaxMultiplier = isSafari ? 0.7 : 1;
-      if (!layers.length || mediaQuery.matches) {
-        return;
-      }
-
-      let isTicking = false;
-      const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
-
-      const getViewportHeight = () => window.innerHeight || document.documentElement.clientHeight || 0;
-
-      const getParallaxRoot = (layer) => {
-        const rootName = layer.dataset.parallaxRoot;
-
-        if (rootName) {
-          return document.querySelector(`[data-parallax-section="${rootName}"]`);
-        }
-
-        return layer.closest('[data-parallax-section]');
-      };
-
-      const getSectionProgress = (root, viewportHeight) => {
-        const rect = root.getBoundingClientRect();
-        const travel = rect.height + viewportHeight;
-        const progress = travel > 0
-          ? clamp((viewportHeight - rect.top) / travel, 0, 1)
-          : 0;
-
-        return { progress, travel };
-      };
-
-      const updateParallax = () => {
-        const viewportHeight = getViewportHeight();
-
-        for (const layer of layers) {
-          const root = getParallaxRoot(layer);
-
-          if (!root) {
-            continue;
-          }
-
-          const { progress, travel } = getSectionProgress(root, viewportHeight);
-          const speed = Number(layer.dataset.parallaxSpeed || 0) * parallaxMultiplier;
-          const baseline = Number(layer.dataset.parallaxBaseline || 0.5);
-          const sectionTravel = travel;
-          const offset = (progress - baseline) * sectionTravel * speed;
-
-          layer.style.setProperty('--parallax-offset', `${offset.toFixed(2)}px`);
-        }
-
-        isTicking = false;
-      };
-
-      const requestUpdate = () => {
-        if (isTicking) {
-          return;
-        }
-
-        isTicking = true;
-        window.requestAnimationFrame(updateParallax);
-      };
-
-      window.addEventListener('scroll', requestUpdate, { passive: true });
-      window.addEventListener('resize', () => {
-        requestUpdate();
-      });
-      mediaQuery.addEventListener('change', (event) => {
-        if (event.matches) {
-          for (const layer of layers) {
-            layer.style.setProperty('--parallax-offset', '0px');
-          }
-          return;
-        }
-
-        requestUpdate();
-      });
-
-      requestUpdate();
-    })();
-  </script>
-
-  <script>
-    /* Set --desc-height per card so the footer slide-up matches each desc exactly */
-    document.querySelectorAll('.client-card').forEach(card => {
-      const desc = card.querySelector('.client-card__desc');
-      if (desc) card.style.setProperty('--desc-height', desc.offsetHeight + 'px');
-    });
-  </script>
+  <script defer src="js/page-transitions.js?v=1"></script>
+  <script defer src="js/layout-measurements.js?v=1"></script>
+  <script type="module" src="js/motion-effects.js?v=4"></script>
 </body>
 </html>

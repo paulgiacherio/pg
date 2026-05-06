@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Codex Skills vs. CMS Weight — Paul Giacherio</title>
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=9">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="is-loading">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="page page--interior page--blog">
     <header class="stream-header">
@@ -46,12 +46,17 @@
 
     <footer class="site-footer site-footer--interior site-footer--composed">
       <div class="site-footer__meta">
-        <p class="site-footer__email"><a class="site-footer__link" href="mailto:paulgiacherio@gmail.com">paulgiacherio@gmail.com</a></p>
+        <p class="site-footer__email"><a class="site-footer__link link-orbit" href="mailto:paulgiacherio@gmail.com">paulgiacherio@gmail.com</a></p>
+        <p class="site-footer__changelog"><a class="site-footer__link link-orbit" href="changelog.html">changelog</a></p>
       </div>
       <div class="site-footer__name-wrap">
-        <img class="site-footer__name" src="img/giacherio-footer.svg" alt="" aria-hidden="true">
+        <button class="site-footer__name-button" type="button" aria-label="Giacherio pronunciation: Jah-care-ee-oh">
+          <img class="site-footer__name" src="img/giacherio-footer-dark.svg" alt="" aria-hidden="true">
+          <span class="site-footer__pronunciation" role="tooltip">Jah &bull; <strong>care</strong> &bull; ee &bull; oh</span>
+        </button>
       </div>
     </footer>
   </div>
+  <script defer src="js/page-transitions.js?v=1"></script>
 </body>
 </html>
