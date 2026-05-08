@@ -16,6 +16,10 @@ Working ticket list for tightening the `index.html` homepage foundation. These a
 | [PG-008](PG-008-metadata-social-cards.md) | Add Metadata and Social Cards | Medium | Todo |
 | [PG-009](PG-009-progressive-enhancement-baseline.md) | Define Progressive Enhancement Baseline | Medium | Todo |
 | [PG-010](PG-010-viewport-motion-qa-matrix.md) | Create Viewport and Motion QA Matrix | Medium | Todo |
+| [PG-011](PG-011-contact-form.md) | Create Contact Form | Medium | Todo |
+| [PG-012](PG-012-glamour-doodle-share.md) | Send Glamour Shot Doodles | Medium | Todo |
+| [PG-013](PG-013-client-card-brand-colors.md) | Add Client Card Brand Color Hovers | Low | Todo |
+| [PG-014](PG-014-revisit-mobile-breakpoint.md) | Revisit Mobile Breakpoint Polish | High | Todo |
 
 ## Ticket Template
 
