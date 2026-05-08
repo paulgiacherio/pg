@@ -2,6 +2,8 @@
 // Keep scroll-linked effects in motion-effects.js.
 
 const setClientCardDescriptionHeights = () => {
+  if (window.matchMedia('(max-width: 768px)').matches) return;
+
   document.querySelectorAll('.client-card').forEach((card) => {
     const desc = card.querySelector('.client-card__desc');
 

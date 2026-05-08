@@ -3,6 +3,11 @@
     document.body.classList.add('is-ready');
   };
 
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    showPage();
+    return;
+  }
+
   window.requestAnimationFrame(showPage);
 
   window.addEventListener('pageshow', (event) => {

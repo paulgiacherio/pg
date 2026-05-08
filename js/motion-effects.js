@@ -1,9 +1,11 @@
-import { scroll } from 'motion';
-
 // Scroll-linked visual effects live here. Motion.dev provides the scroll progress;
 // site-specific code maps that progress to CSS variables or word highlight state.
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const mobileViewport = window.matchMedia('(max-width: 768px)');
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+const { scroll = null } = mobileViewport.matches
+  ? {}
+  : await import('motion').catch(() => ({}));
 
 let stopEffects = [];
 
@@ -16,6 +18,15 @@ const resetEffects = () => {
   document.querySelector('.glamour')?.style.setProperty('--glamour-offset', '0px');
   document.querySelectorAll('.parallax-layer, .role-table__panel, .clients__column, .changelog__panel')
     .forEach((element) => element.style.setProperty('--parallax-offset', '0px'));
+};
+
+const resetIntroHighlight = () => {
+  const para = document.querySelector('.intro-para__text');
+  if (!para) return;
+
+  const sourceText = para.dataset.sourceText || para.textContent.trim();
+  para.dataset.sourceText = sourceText;
+  para.textContent = sourceText;
 };
 
 const trackPageScroll = (callback) => {
@@ -203,6 +214,11 @@ const setupIntroHighlight = () => {
 
 const startEffects = () => {
   resetEffects();
+  resetIntroHighlight();
+
+  if (mobileViewport.matches) {
+    return;
+  }
 
   stopEffects = [
     setupIntroHighlight(),
@@ -233,6 +249,12 @@ if (typeof reduceMotion.addEventListener === 'function') {
   reduceMotion.addEventListener('change', restartEffects);
 } else if (typeof reduceMotion.addListener === 'function') {
   reduceMotion.addListener(restartEffects);
+}
+
+if (typeof mobileViewport.addEventListener === 'function') {
+  mobileViewport.addEventListener('change', restartEffects);
+} else if (typeof mobileViewport.addListener === 'function') {
+  mobileViewport.addListener(restartEffects);
 }
 
 startEffects();

@@ -1,4 +1,6 @@
 const setupGlamourDoodle = () => {
+  if (window.matchMedia('(max-width: 768px)').matches) return;
+
   const glamour = document.querySelector('.glamour');
   const canvas = glamour?.querySelector('.glamour__doodle-canvas');
   const clearButton = glamour?.querySelector('[data-doodle-action="clear"]');

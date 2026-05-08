@@ -521,6 +521,10 @@ button.glamour__doodle-tool {
   padding-block-end: calc(var(--row-unit) * 2);
 }
 
+.mobile-section-heading {
+  display: none;
+}
+
 .intro-para {
   padding-block-start: 0;
   padding-block-end: calc(var(--row-unit) * 4);
@@ -1688,13 +1692,18 @@ button.glamour__doodle-tool {
 
 /* Stream mobile overrides */
 @media (max-width: 768px) {
+  :root {
+    --mobile-gutter: 24px;
+    --mobile-hero-intro-gap: calc(var(--row-unit) * 0.5);
+  }
+
   .stream-header {
     grid-column: 1 / -1;
     grid-template-columns: none;
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding-inline: 32px;
+    padding-inline: var(--mobile-gutter);
     position: static;
   }
 
@@ -1712,7 +1721,7 @@ button.glamour__doodle-tool {
     grid-column: 1 / -1;
     grid-template-columns: 1fr;
     transform: none !important;
-    padding-inline: 32px;
+    padding-inline: var(--mobile-gutter);
   }
 
   .stream__meta {
@@ -1728,7 +1737,7 @@ button.glamour__doodle-tool {
 
   .changelog-page {
     grid-template-columns: 1fr;
-    padding-inline: 32px;
+    padding-inline: var(--mobile-gutter);
   }
 
   .changelog--page,
@@ -1764,20 +1773,31 @@ button.glamour__doodle-tool {
 
   /* Mobile column definition — all section grids inherit this */
   :root {
-    --page-columns: [c1] 32px [c2] minmax(0, 1fr) [c3] 32px [c4];
+    --page-columns: [c1] var(--mobile-gutter) [c2] minmax(0, 1fr) [c3] var(--mobile-gutter) [c4];
+    --row-unit: clamp(52px, calc(100vh / 12), 78px);
+  }
+
+  body {
+    font-size: 1.125rem;
   }
 
   .page--interior {
     row-gap: clamp(2rem, 6vw, 3.5rem);
   }
 
+  .page {
+    overflow-x: hidden;
+  }
+
   /* Hero */
   .hero {
     grid-template-rows: none;
     grid-auto-rows: auto;
-    row-gap: clamp(1.25rem, 5vw, 1.75rem);
-    padding-top: clamp(3.5rem, 14vw, 6rem);
-    padding-bottom: clamp(1.5rem, 6vw, 2.5rem);
+    row-gap: clamp(1.1rem, 4vw, 1.6rem);
+    padding-top: clamp(4.25rem, 16vw, 6.5rem);
+    padding-bottom: var(--mobile-hero-intro-gap);
+    transform: none;
+    will-change: auto;
   }
 
   .hero__version {
@@ -1789,35 +1809,102 @@ button.glamour__doodle-tool {
     grid-column: 2 / 3;
     grid-row: auto;
     align-self: auto;
+    min-width: 0;
+    width: calc(100vw - (var(--mobile-gutter) * 2));
+    max-width: calc(100vw - (var(--mobile-gutter) * 2));
   }
 
   .hero__intro-title {
-    font-size: clamp(2rem, 8vw, 3rem);
+    margin-top: clamp(0.8rem, 4vw, 1.35rem);
+    font-size: clamp(2.15rem, 8vw, 3.1rem);
+    line-height: 1.08;
+    overflow-wrap: break-word;
   }
 
   .glamour {
     grid-column: 2 / 3;
     grid-row: auto;
-    min-height: 10rem;
-    max-height: 14rem;
+    aspect-ratio: 4 / 3;
+    min-height: 15rem;
+    max-height: 19rem;
+    margin-top: clamp(0.4rem, 2.5vw, 0.9rem);
     border-radius: 0;
+    transform: none;
+    will-change: auto;
+  }
+
+  .glamour__doodle-canvas,
+  .glamour__doodle-tools,
+  .glamour__credit-wrap {
+    display: none;
   }
 
   .intro-para {
     min-height: auto;
-    padding-block-start: 0;
-    padding-block-end: calc(var(--row-unit) * 3);
+    padding-block-start: var(--mobile-hero-intro-gap);
+    padding-block-end: calc(var(--row-unit) * 1.6);
+  }
+
+  .intro-para::before {
+    content: "";
+    grid-column: c2 / c3;
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-bottom: var(--mobile-hero-intro-gap);
+    background: var(--border-subtle);
+  }
+
+  .intro-para::after {
+    content: "";
+    grid-column: c2 / c3;
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: var(--mobile-hero-intro-gap);
+    background: var(--border-subtle);
   }
 
   .intro-para__text {
     grid-column: c2 / c3;
     transform: none;
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    min-width: 0;
+    width: calc(100vw - (var(--mobile-gutter) * 2));
+    max-width: calc(100vw - (var(--mobile-gutter) * 2));
+    font-size: clamp(1.85rem, 6.8vw, 2.55rem);
+    line-height: 1.25;
+    overflow-wrap: break-word;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
   /* Page sections */
   .page-sections {
-    row-gap: clamp(2.5rem, 7vw, 4rem);
+    row-gap: 0;
+  }
+
+  .home-section {
+    padding-block-start: calc(var(--row-unit) * 1.15);
+    padding-block-end: calc(var(--row-unit) * 1.15);
+  }
+
+  .mobile-section-heading {
+    display: block;
+    grid-column: 1;
+    width: fit-content;
+    margin-bottom: clamp(0.9rem, 3vw, 1.2rem);
+    font-size: 0.95rem;
+    line-height: 1.2;
+    font-weight: 300;
+    letter-spacing: 0;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
   /* Interior pages */
@@ -1927,6 +2014,8 @@ button.glamour__doodle-tool {
   .roles {
     min-height: 0;
     align-items: start;
+    padding-block-start: calc(var(--row-unit) * 0.9);
+    padding-block-end: calc(var(--row-unit) * 1.1);
   }
 
   .role-table {
@@ -1945,8 +2034,8 @@ button.glamour__doodle-tool {
     grid-row: auto;
     grid-template-columns: 1fr;
     align-items: start;
-    gap: 0.3rem;
-    padding: 0.9rem 0;
+    gap: 0.35rem;
+    padding: 1rem 0;
   }
 
   .role-table__label,
@@ -1957,15 +2046,19 @@ button.glamour__doodle-tool {
 
   /* Clients */
   .clients {
-    padding-block-start: clamp(6rem, 20vw, 10rem);
-    padding-block-end: clamp(6rem, 20vw, 10rem);
+    padding-block-start: calc(var(--row-unit) * 1.15);
+    padding-block-end: calc(var(--row-unit) * 1.35);
   }
 
   .clients__layout {
     grid-column: 1 / -1;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    row-gap: clamp(1.25rem, 4vw, 1.75rem);
+    row-gap: clamp(1rem, 3.5vw, 1.35rem);
+  }
+
+  .clients__layout .mobile-section-heading {
+    margin-bottom: 0;
   }
 
   .clients__intro,
@@ -1975,7 +2068,9 @@ button.glamour__doodle-tool {
 
   .clients__intro {
     grid-row: auto;
-    max-width: 18rem;
+    max-width: 19rem;
+    font-size: clamp(1.15rem, 5vw, 1.5rem);
+    line-height: 1.38;
   }
 
   .clients__cards {
@@ -1983,8 +2078,8 @@ button.glamour__doodle-tool {
     display: flex;
     gap: var(--clients-gap);
     overflow-x: auto;
-    width: calc(100% + 32px);
-    margin-right: -32px;
+    width: calc(100% + var(--mobile-gutter));
+    margin-right: calc(-1 * var(--mobile-gutter));
     padding-top: 0;
     padding-bottom: 0.5rem;
     scroll-snap-type: x proximity;
@@ -1995,6 +2090,7 @@ button.glamour__doodle-tool {
   .clients__column {
     display: contents;
     transform: none;
+    will-change: auto;
   }
 
   .clients__column--left,
@@ -2009,6 +2105,14 @@ button.glamour__doodle-tool {
     flex: 0 0 clamp(14rem, 72vw, 18rem);
     scroll-snap-align: start;
     transition: none;
+  }
+
+  .client-card:hover {
+    transform: none;
+  }
+
+  .client-card::after {
+    display: none;
   }
 
   .client-card__footer {
@@ -2037,7 +2141,7 @@ button.glamour__doodle-tool {
   .changelog__content {
     grid-column: 1 / -1;
     grid-template-columns: 1fr;
-    row-gap: var(--space-2);
+    row-gap: clamp(0.95rem, 3vw, 1.25rem);
     padding: 0;
   }
 
@@ -2048,6 +2152,19 @@ button.glamour__doodle-tool {
     padding-top: 0;
   }
 
+  .changelog__eyebrow {
+    width: fit-content;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    font-weight: 300;
+    letter-spacing: 0;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
   .changelog__list {
     grid-auto-rows: auto;
   }
@@ -2055,6 +2172,8 @@ button.glamour__doodle-tool {
   .changelog__entry {
     grid-template-columns: minmax(4rem, 4.5rem) minmax(0, 1fr);
     min-height: 0;
+    gap: 1rem;
+    padding: 0.9rem 0;
   }
 
   .changelog__description {
