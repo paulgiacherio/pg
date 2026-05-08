@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=19">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script type="importmap">
     {
@@ -23,10 +23,14 @@
     <header class="hero">
       <div class="hero__text">
         <div class="hero__intro">
-          <p class="hero__intro-name">paul giacherio —</p>
+          <p class="hero__intro-name" aria-label="paul giacherio">
+            <span class="hero__intro-first">paul</span>
+            <span class="hero__intro-last" data-name-typewriter data-original="giacherio" tabindex="0">giacherio</span>
+            <span class="hero__intro-mark" aria-hidden="true">—</span>
+          </p>
           <h1 class="hero__intro-title">design leader with a focus on complex digital experiences</h1>
         </div>
-        <p class="hero__version">2026 — v1.0.0</p>
+        <p class="hero__version">2026 — v1.1.0</p>
       </div>
       <div class="glamour">
         <img
@@ -39,6 +43,14 @@
           fetchpriority="high"
           decoding="async"
         >
+        <canvas class="glamour__doodle-canvas" aria-hidden="true"></canvas>
+        <div class="glamour__doodle-tools" aria-label="Portrait doodle tools" role="group">
+          <button class="glamour__doodle-tool" type="button" data-doodle-action="clear" aria-label="Clear portrait doodle">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M20.725 5.275H16.035V4.385C16.0302 3.755 15.779 3.152 15.335 2.705C15.1134 2.4826 14.85 2.3063 14.56 2.1862C14.2699 2.066 13.9589 2.0045 13.645 2.005H10.385C10.0711 2.0045 9.7601 2.066 9.4701 2.1862C9.18 2.3063 8.9166 2.4826 8.695 2.705C8.2538 3.153 8.0061 3.7563 8.005 4.385V5.275H3.315C3.1161 5.275 2.9253 5.354 2.7847 5.4947C2.644 5.6353 2.565 5.8261 2.565 6.025C2.565 6.2239 2.644 6.4147 2.7847 6.5553C2.9253 6.696 3.1161 6.775 3.315 6.775H4.735V18.535C4.7309 18.9908 4.8172 19.4429 4.9889 19.8651C5.1605 20.2873 5.4141 20.6713 5.735 20.995C6.3894 21.6361 7.269 21.9951 8.185 21.995H15.805C16.7211 21.9951 17.6007 21.6361 18.255 20.995C18.5759 20.6713 18.8295 20.2873 19.0012 19.8651C19.1728 19.4429 19.2591 18.9908 19.255 18.535V6.775H20.685C20.8839 6.775 21.0747 6.696 21.2153 6.5553C21.356 6.4147 21.435 6.2239 21.435 6.025C21.435 5.8261 21.356 5.6353 21.2153 5.4947C21.0747 5.354 20.8839 5.275 20.685 5.275H20.725ZM9.525 4.385C9.5251 4.2696 9.5481 4.1553 9.5927 4.0489C9.6373 3.9425 9.7027 3.846 9.785 3.765C9.9503 3.6015 10.1725 3.5083 10.405 3.505H13.665C13.782 3.5043 13.898 3.5269 14.0062 3.5715C14.1144 3.6162 14.2126 3.682 14.295 3.765C14.4576 3.9309 14.5507 4.1527 14.555 4.385V5.275H9.555L9.525 4.385ZM10.855 16.995C10.855 17.2602 10.7497 17.5146 10.5621 17.7021C10.3746 17.8897 10.1202 17.995 9.855 17.995C9.5898 17.995 9.3354 17.8897 9.1479 17.7021C8.9604 17.5146 8.855 17.2602 8.855 16.995V11.565C8.855 11.2998 8.9604 11.0455 9.1479 10.8579C9.3354 10.6704 9.5898 10.565 9.855 10.565C10.1202 10.565 10.3746 10.6704 10.5621 10.8579C10.7497 11.0455 10.855 11.2998 10.855 11.565V16.995ZM15.215 16.995C15.215 17.2602 15.1096 17.5146 14.9221 17.7021C14.7346 17.8897 14.4802 17.995 14.215 17.995C13.9498 17.995 13.6954 17.8897 13.5079 17.7021C13.3204 17.5146 13.215 17.2602 13.215 16.995V11.565C13.215 11.2998 13.3204 11.0455 13.5079 10.8579C13.6954 10.6704 13.9498 10.565 14.215 10.565C14.4802 10.565 14.7346 10.6704 14.9221 10.8579C15.1096 11.0455 15.215 11.2998 15.215 11.565V16.995Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
         <div class="glamour__credit-wrap">
           <span class="glamour__tooltip" role="tooltip">Photo: <a class="glamour__tooltip-link" href="https://www.sarahcramershields.com/" target="_blank" rel="noreferrer">Sarah Cramer Shields</a></span>
           <a class="glamour__credit" href="https://www.sarahcramershields.com/" target="_blank" rel="noreferrer" aria-label="Photo by Sarah Cramer Shields">
@@ -146,16 +158,16 @@
             <h2 class="changelog__eyebrow" id="changelog-title">Changelog</h2>
             <div class="changelog__list">
               <article class="changelog__entry">
+                <p class="changelog__version">v1.1.0</p>
+                <p class="changelog__description">face doodle</p>
+              </article>
+              <article class="changelog__entry">
                 <p class="changelog__version">v1.0.0</p>
                 <p class="changelog__description">new design</p>
               </article>
               <article class="changelog__entry">
                 <p class="changelog__version">v0.3.4</p>
                 <p class="changelog__description">client summaries</p>
-              </article>
-              <article class="changelog__entry">
-                <p class="changelog__version">v0.3.3</p>
-                <p class="changelog__description">css refactoring</p>
               </article>
             </div>
             <p class="changelog__link-wrap"><a class="link-orbit" href="changelog.html">view all</a></p>
@@ -164,15 +176,26 @@
       </section>
       <footer class="site-footer site-footer--composed site-footer--home">
         <div class="site-footer__meta">
-          <div class="site-footer__note">
-            <img class="site-footer__album-art" src="img/miss-machine.jpg" alt="Album art for Miss Machine by The Dillinger Escape Plan">
-            <div class="site-footer__note-copy">
-              <p class="site-footer__note-label">Built while listening to:</p>
-              <p class="site-footer__note-title"><a class="site-footer__link" href="https://music.apple.com/us/album/miss-machine/65885064" target="_blank" rel="noreferrer">The Dillinger Escape Plan — Miss Machine</a></p>
-            </div>
-          </div>
-          <p class="site-footer__email"><a class="site-footer__link link-orbit" href="mailto:paulgiacherio@gmail.com">paulgiacherio@gmail.com</a></p>
-          <p class="site-footer__changelog"><a class="site-footer__link link-orbit" href="changelog.html">changelog</a></p>
+          <p class="site-footer__email">
+            <a class="site-footer__link" href="mailto:paulgiacherio@gmail.com">
+              <svg class="site-footer__link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="2" y="4" width="20" height="16" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M6 9L10.8 12.6C11.5111 13.1333 12.4889 13.1333 13.2 12.6L18 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>paulgiacherio@gmail.com</span>
+            </a>
+          </p>
+          <p class="site-footer__changelog">
+            <a class="site-footer__link" href="changelog.html">
+              <svg class="site-footer__link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 6C4 3.79086 5.79086 2 8 2H14.0633C14.6568 2 15.2197 2.26365 15.5997 2.71963L19.5364 7.44373C19.836 7.80316 20 8.25623 20 8.7241V18C20 20.2091 18.2091 22 16 22H8C5.79086 22 4 20.2091 4 18V6Z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M15 2.5V6C15 7.10457 15.8954 8 17 8H19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M8 12H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M8 17H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span>changelog</span>
+            </a>
+          </p>
         </div>
         <div class="site-footer__name-wrap">
           <button class="site-footer__name-button" type="button" aria-label="Giacherio pronunciation: Jah-care-ee-oh">
@@ -185,6 +208,8 @@
   </div>
   <script defer src="js/page-transitions.js?v=1"></script>
   <script defer src="js/layout-measurements.js?v=1"></script>
+  <script defer src="js/glamour-doodle.js?v=9"></script>
+  <script defer src="js/name-typewriter.js?v=1"></script>
   <script type="module" src="js/motion-effects.js?v=4"></script>
 </body>
 </html>

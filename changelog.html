@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Changelog — Paul Giacherio</title>
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body class="is-loading">
@@ -23,6 +23,19 @@
     <main class="changelog-page" id="main-content" tabindex="-1">
       <section class="changelog changelog--page" aria-label="Changelog entries">
         <div class="changelog__list">
+          <article class="changelog__entry">
+            <p class="changelog__version">v1.1.0</p>
+            <p class="changelog__description">face doodle</p>
+            <div class="changelog__listening">
+              <a class="changelog__listening-link" href="https://music.apple.com/us/album/synchronicity-remastered-2003/1440673959" target="_blank" rel="noreferrer">
+                <img class="changelog__art" src="img/synchronicity-remastered-2003.jpg" alt="Album art for Synchronicity (Remastered 2003) by The Police">
+                <span class="changelog__listening-copy">
+                  <span class="changelog__artist">The Police</span>
+                  <span class="changelog__record">Synchronicity (Remastered 2003)</span>
+                </span>
+              </a>
+            </div>
+          </article>
           <article class="changelog__entry">
             <p class="changelog__version">v1.0.0</p>
             <p class="changelog__description">new design</p>
@@ -146,8 +159,26 @@
 
     <footer class="site-footer site-footer--interior site-footer--composed">
       <div class="site-footer__meta">
-        <p class="site-footer__email"><a class="site-footer__link link-orbit" href="mailto:paulgiacherio@gmail.com">paulgiacherio@gmail.com</a></p>
-        <p class="site-footer__changelog"><a class="site-footer__link link-orbit" href="changelog.html">changelog</a></p>
+        <p class="site-footer__email">
+          <a class="site-footer__link" href="mailto:paulgiacherio@gmail.com">
+            <svg class="site-footer__link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="2" y="4" width="20" height="16" rx="5" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M6 9L10.8 12.6C11.5111 13.1333 12.4889 13.1333 13.2 12.6L18 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>paulgiacherio@gmail.com</span>
+          </a>
+        </p>
+        <p class="site-footer__changelog">
+          <a class="site-footer__link" href="changelog.html">
+            <svg class="site-footer__link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 6C4 3.79086 5.79086 2 8 2H14.0633C14.6568 2 15.2197 2.26365 15.5997 2.71963L19.5364 7.44373C19.836 7.80316 20 8.25623 20 8.7241V18C20 20.2091 18.2091 22 16 22H8C5.79086 22 4 20.2091 4 18V6Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M15 2.5V6C15 7.10457 15.8954 8 17 8H19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 12H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 17H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span>changelog</span>
+          </a>
+        </p>
       </div>
       <div class="site-footer__name-wrap">
         <button class="site-footer__name-button" type="button" aria-label="Giacherio pronunciation: Jah-care-ee-oh">
